@@ -9,7 +9,6 @@
 //#include "ParseUtils.h"
 //#import <OpenGL/gl.h>
 //#include <GL/glew.h>
-#import <GLFW/glfw3.h>
 #import "UGLIAPIBinder.h"
 #import "GenericGrowableList.h"
 
@@ -432,7 +431,7 @@ UGLIhandle spawn_UGLISprite2D(void);
 typedef struct {
     
     UGLIfloat *data; // data to upload to the GPU. NULL if partition empty
-    GLint startIndex;
+    int startIndex;
     
 } UGLITilemapPartition;
 

@@ -13,6 +13,8 @@
 
 void _UGLI_initAPIBinding(void);
 
+#define TRUE 1
+#define FALSE 0
 
 //#include "UGLI_internal.h"
 
