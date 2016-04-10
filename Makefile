@@ -1,17 +1,15 @@
-includedir = /usr/include/GNUstep
-
 
 uglic:	y.tab.o translator.o lex.yy.o hardcoded.o UGLIAPIBinder.o UGLIinternal.o
-	gcc -o uglic y.tab.o translator.o lex.yy.o hardcoded.o UGLIAPIBinder.o UGLIinternal.o `gnustep-config --objc-flags` -L/usr/lib/GNUstep/Libraries -lobjc -lgnustep-base -I$(includedir)
+	gcc -o uglic y.tab.o translator.o lex.yy.o hardcoded.o UGLIAPIBinder.o UGLIinternal.o -framework Foundation
 
 UGLIAPIBinder.o: UGLIAPIBinder.m
-	gcc -c UGLIAPIBinder.m -I$(includedir)
+	gcc -c UGLIAPIBinder.m
 
 translator.o: translator.m
-	gcc -c translator.m -I$(includedir)
+	gcc -c translator.m
 
 UGLIinternal.o: UGLIinternal.m
-	gcc -c UGLIinternal.m -I$(includedir)
+	gcc -c UGLIinternal.m
 
 hardcoded.o: hardcoded.c
 	gcc -c hardcoded.c
