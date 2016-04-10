@@ -431,7 +431,7 @@ UGLIhandle spawn_UGLISprite2D(void);
 typedef struct {
     
     UGLIfloat *data; // data to upload to the GPU. NULL if partition empty
-    int startIndex;
+    GLint startIndex;
     
 } UGLITilemapPartition;
 
